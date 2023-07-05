@@ -1,0 +1,41 @@
+TO UPDATE LOCAL REPO:
+$ git fetch origin
+# Fetches updates made to an online repository
+$ git merge origin YOUR_BRANCH_NAME
+# Merges updates made online with your local work
+
+OR
+$ git pull origin YOUR_BRANCH_NAME
+# Grabs online updates and merges them with your local work
+
+
+
+
+
+TO CREATE A BRANCH:
+
+$ git branch (to check which branch you are on)
+$ git branch branch_name (to create a new branch)
+$ git checkout branch_name to switch too a new branch
+
+The git push command takes two arguments:
+
+A remote name, for example, origin
+A branch name, for example, main
+For example:
+
+git push REMOTE-NAME BRANCH-NAME
+
+
+
+DELETING A BRANCH:
+git push REMOTE-NAME :BRANCH-NAME
+Note that there is a space before the colon. The command resembles the same steps you'd take to rename a branch. However, here, you're telling Git to push nothing into BRANCH-NAME on REMOTE-NAME. Because of this, git push deletes the branch on the remote repository.
+
+TO RENAME A BRANCH:
+$ git push REMOTE-NAME LOCAL-BRANCH-NAME:REMOTE-BRANCH-NAME
+To rename a branch, you'd use the same git push command, but you would add one more argument: the name of the new branch. For example above. This pushes the LOCAL-BRANCH-NAME to your REMOTE-NAME, but it is renamed to REMOTE-BRANCH-NAME.
+
+MORE INFO:
+https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository
+
